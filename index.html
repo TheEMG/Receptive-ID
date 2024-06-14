@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptive ID</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Receptive ID Image Selector</h1>
+        </header>
+
+        <main>
+            <div class="image-request-form">
+                <label for="category">Choose a category:</label>
+                <select id="category" name="category">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="cap">Cap</option>
+                    <option value="dog">Dog</option>
+                    <option value="car">Car</option>
+                    <option value="bathtub">Bathtub</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button id="request-button">Show Image</button>
+            </div>
+
+            <div class="image-display">
+                <!-- This is where the image will be displayed -->
+                <img id="displayed-image" src="" alt="Requested Image">
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Receptive ID</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
