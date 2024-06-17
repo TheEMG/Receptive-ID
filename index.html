@@ -6,6 +6,10 @@
     <title>Receptive ID</title>
     
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
 </head>
 <body>
     <div class="container">
@@ -14,6 +18,33 @@
         </header>
 
         <main>
+            <section id="purpose">
+                <h2>Purpose</h2>
+                <p>The purpose of this application is to aid in the visual learning and identification skills of autistic children. By using this tool, children can improve their ability to recognize and name various objects in a fun and interactive way.</p>
+            </section>
+
+            <section id="how-to-use">
+                <h2>How to Use</h2>
+                <ol>
+                    <li>
+                        Choose a category from the dropdown menu.
+                        <img src="assets/img/example_category.png" alt="Example Category" class="example-img">
+                    </li>
+                    <li>
+                        Select the number of images you want to see (4 or 8).
+                        <img src="assets/img/example_number.png" alt="Example Number of Images" class="example-img">
+                    </li>
+                    <li>
+                        Click on the "Show Images" button to display the images.
+                        <img src="assets/img/example_show.png" alt="Show Images Button" class="example-img">
+                    </li>
+                    <li>
+                        If you want to refresh the images while keeping the selected category, click the "Refresh Images" button.
+                        <img src="assets/img/example_refresh.png" alt="Refresh Images Button" class="example-img">
+                    </li>
+                </ol>
+            </section>
+            
             <div class="image-request-form">
                 <label for="category">Choose a category:</label>
                 <select id="category" name="category">
@@ -23,12 +54,23 @@
                     <option value="dog">Dog</option>
                     <option value="car">Car</option>
                     <option value="bathtub">Bathtub</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="coat">Coat</option>
+                    <option value="coat">Bird</option>
                     <!-- Add more options as needed -->
                 </select>
                 <button id="request-button">Show Image</button>
+                <button id="refresh-button"><i class="ri-refresh-line"></i></button>
             </div>
 
-            <div class="image-display">
+
+            <label for="number-of-images">Number of images:</label>
+            <select id="number-of-images" name="number-of-images">
+                <option value="4">4</option>
+                <option value="8">8</option>
+            </select>
+
+            <div class="image-grid" id="image-grid">
                 <!-- This is where the image will be displayed -->
                 <img id="displayed-image" src="" alt="Requested Image">
             </div>

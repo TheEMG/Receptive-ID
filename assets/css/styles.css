@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --primary-color: #6ab7d6;
+    --primary-color-dark:#5a9bb5;
+    --secondary-color:  #f2f2f2;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --extra-light: #f8f8f8;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --highlight-color: #eaeaea;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -13,8 +27,8 @@ body {
 
 header, footer {
     text-align: center;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 10px 0;
 }
 
@@ -24,8 +38,11 @@ header h1 {
 
 main {
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--white);
+    border: 1px solid var(--text-light);
+}
+section {
+    margin-bottom: 20px;
 }
 
 .image-request-form {
@@ -33,11 +50,64 @@ main {
     margin-bottom: 20px;
 }
 
-.image-display {
-    text-align: center;
+.image-grid {
+    display: grid;
+    gap: 10px;
 }
 
-.image-display img {
-    max-width: 100%;
+.image-grid img {
+    width: 100%;
     height: auto;
+    display: block;
+    background-color: var(--highlight-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.image-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-grid.grid-8 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#request-button{
+    display: none;
+}
+#refresh-button{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+/* Style the select element */
+select {
+    appearance: none;
+    background-color: var(--white);
+    border: 1px solid var(--text-light);
+    color: var(--text-dark);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px; 
+    margin: 10px;
+    width: 100px; 
+    cursor: pointer; 
+    
+}
+
+#number-of-images{
+    width: 50px;
+    margin: 0;
+    text-align: center;
+   
+}
+
+select:focus {
+    border-color: var(--primary-color); 
+    box-shadow: 0 0 5px rgba(106, 183, 214, 0.5); 
+    outline: none;
+}
+
