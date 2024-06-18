@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receptive ID</title>
-    
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Receptive ID Image Selector</h1>
-        </header>
+    <header>
+        <h1>Receptive ID Image Selector</h1>
+    </header>
 
-        <main>
+    <main>
+        <div class="container">
             <section id="purpose">
                 <h2>Purpose</h2>
                 <p>The purpose of this application is to aid in the visual learning and identification skills of autistic children. By using this tool, children can improve their ability to recognize and name various objects in a fun and interactive way.</p>
@@ -56,13 +53,12 @@
                     <option value="bathtub">Bathtub</option>
                     <option value="pizza">Pizza</option>
                     <option value="coat">Coat</option>
-                    <option value="coat">Bird</option>
+                    <option value="bird">Bird</option>
                     <!-- Add more options as needed -->
                 </select>
                 <button id="request-button">Show Image</button>
                 <button id="refresh-button"><i class="ri-refresh-line"></i></button>
             </div>
-
 
             <label for="number-of-images">Number of images:</label>
             <select id="number-of-images" name="number-of-images">
@@ -74,12 +70,12 @@
                 <!-- This is where the image will be displayed -->
                 <img id="displayed-image" src="" alt="Requested Image">
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Receptive ID</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2024 Receptive ID</p>
+    </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
